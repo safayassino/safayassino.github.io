@@ -3,27 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name</title>
+    <title>Safa Yassin - Applied Data Analyst</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            line-height: 1.6;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        h1 { color: #333; }
-        a { color: #0066cc; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        .contact-links {
+            margin-top: 20px;
+        }
+        
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1em;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s;
+        }
+        
+        .contact-links a:hover {
+            border-bottom: 2px solid white;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #764ba2;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .project {
+            background: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #764ba2;
+        }
+        
+        .project h3 {
+            margin-top: 0;
+        }
+        
+        .languages span {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Hi, I'm [Your Name]</h1>
-    <p>Welcome to my personal website!</p>
-    
-    <h2>About Me</h2>
-    <p>I'm a graduate student studying Data Science...</p>
-    
-    <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
+    <header>
+        <h1>Safa Yassin</h1>
+        <p>Applied Data Analyst | NLP Specialist | Psycholinguistics Researcher</p>
+        <div class="contact-links">
+            <a href="mailto:safa.yassin4@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/safayassino" target="_blank">LinkedIn</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a graduate student completing my Master's in Data Science and Applications at the University of Trieste, with a strong interdisciplinary background bridging cognitive psychology, psycholinguistics, and applied data science. Currently working as a Data Analyst at Evoseed, where I develop advanced NLP solutions and RAG systems.</p>
+            <p>My research interests lie at the intersection of computational linguistics and cognitive science, with a focus on applying data-driven approaches to understand language and psychological processes.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming</h4>
+                    <p>Python (Pandas, NumPy, scikit-learn, TensorFlow), R, SQL</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Data Analysis</h4>
+                    <p>Statistical Analysis, Data Visualization, Power BI, Excel</p>
+                </div>
+                <div class="skill-category">
+                    <h4>NLP & AI</h4>
+                    <p>RAG Systems, LLMs, TTS/STT Models, Text Analysis</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Research</h4>
+                    <p>Psycholinguistics, Applied Linguistics, Experimental Design</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            
+            <div class="project">
+                <h3>Computational Analysis of Psychological Discourse</h3>
+                <p><strong>Master's Thesis (2025)</strong> - NLP-based corpus analysis of recovery narratives from psychological interviews, supervised by Prof. M. Trevisani and Prof. A. Tuzzi.</p>
+            </div>
+            
+            <div class="project">
+                <h3>TTS and STT Models in Friulan</h3>
+                <p><strong>Evoseed & ARLEF FVG (2024)</strong> - Development of text-to-speech and speech-to-text models for the Friulan language using applied linguistics and AWS services.</p>
+            </div>
+            
+            <div class="project">
+                <h3>Multi-Modal Customer Service AI</h3>
+                <p><strong>Evoseed (2025)</strong> - Developed comprehensive NLP pipelines and RAG systems for intelligent customer service automation.</p>
+            </div>
+            
+            <div class="project">
+                <h3>Propaganda Detection in Tenglish</h3>
+                <p><strong>NLP Course (2025)</strong> - Built machine learning model for detecting propaganda in Telugu-English code-mixed text using PyTorch and HuggingFace transformers.</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <h3>Master of Data Science and Applications</h3>
+            <p>University of Trieste (2022-2025) | Average: 28/30</p>
+            
+            <h3>Master of Cognitive and Social Psychology</h3>
+            <p>University of Trieste (2025-present)</p>
+            
+            <h3>Bachelor of Psychology and Cognitive Science</h3>
+            <p>University of Padova (2019-2022) | Grade: 105/110</p>
+        </section>
+
+        <section id="languages">
+            <h2>Languages</h2>
+            <div class="languages">
+                <span>Arabic (Native)</span>
+                <span>Italian (Fluent)</span>
+                <span>English (Fluent)</span>
+                <span>Hebrew (Fluent)</span>
+                <span>Spanish (Intermediate)</span>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Safa Yassin. All rights reserved.</p>
+    </footer>
 </body>
-</html> 
+</html>
