@@ -19,23 +19,37 @@
             margin-bottom: 35px;
             border-bottom: 2px solid #e0e0e0;
             padding-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .header-text {
+            flex: 1;
         }
         
         h1 {
             font-size: 2em;
             font-weight: 600;
             margin: 0 0 8px 0;
-            color: #2c3e50;
+            color: #c7881d;
         }
         
         .subtitle {
-            color: #5a6c7d;
+            color: #d4933d;
             font-size: 1.05em;
             margin-bottom: 12px;
         }
         
         .contact a {
-            color: #2980b9;
+            color: #c7881d;
             text-decoration: none;
             margin-right: 15px;
         }
@@ -49,14 +63,14 @@
             font-weight: 600;
             margin-top: 35px;
             margin-bottom: 15px;
-            color: #34495e;
+            color: #b8860b;
         }
         
         h3 {
             font-size: 1.1em;
             font-weight: 600;
             margin: 18px 0 6px 0;
-            color: #2c3e50;
+            color: #8b6914;
         }
         
         p {
@@ -92,15 +106,25 @@
             color: #7f8c8d;
             font-size: 0.9em;
         }
+        
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Safa Yassin</h1>
-        <p class="subtitle">Data Science for social sciences | Psycholinguistics | Semantics</p>
-        <div class="contact">
-            <a href="mailto:safa.yassin4@gmail.com">Email</a>
-            <a href="https://www.linkedin.com/in/safayassino">LinkedIn</a>
+        <img src="photo.jpg" alt="Safa Yassin" class="profile-img">
+        <div class="header-text">
+            <h1>Safa Yassin</h1>
+            <p class="subtitle">Data Science for social sciences | Psycholinguistics | Semantics</p>
+            <div class="contact">
+                <a href="mailto:safa.yassin4@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/safayassino">LinkedIn</a>
+            </div>
         </div>
     </header>
 
@@ -117,7 +141,7 @@
     </section>
 
     <section>
-        <h2>Projects</h2>
+        <h2>Some Projects</h2>
         
         <div class="project">
             <h3>TTS and STT Models in Friulan</h3>
