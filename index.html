@@ -15,6 +15,7 @@
             background: #ffffff;
         }
         
+        /* Original Header Style */
         header {
             margin-bottom: 35px;
             border-bottom: 2px solid #e0e0e0;
@@ -77,34 +78,106 @@
             margin: 12px 0;
         }
         
-        .project {
-            margin-bottom: 22px;
+        /* Modern Card Grid for Projects */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
         }
         
-        .program {
-            margin-bottom: 18px;
+        .card {
+            padding: 25px;
+            background: #fafafa;
+            border-radius: 8px;
+            border-left: 4px solid #d4933d;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
         
-        .education-item {
-            margin-bottom: 18px;
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        .education-item p {
-            margin: 4px 0;
+        .card-title {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .card-meta {
+            color: #c7881d;
+            font-size: 0.9em;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .card-desc {
             color: #5a6c7d;
+            font-size: 0.95em;
+            line-height: 1.6;
         }
         
-        .work-item {
-            margin-bottom: 18px;
+        /* Modern Timeline for Experience/Education */
+        .timeline-item {
+            border-left: 3px solid #e0e0e0;
+            padding-left: 30px;
+            padding-bottom: 30px;
+            position: relative;
+            margin-left: 20px;
         }
         
-        .work-item p {
-            margin: 4px 0;
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: #c7881d;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #c7881d;
+        }
+        
+        .timeline-title {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-meta {
+            color: #7f8c8d;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+        
+        .timeline-desc {
             color: #5a6c7d;
+            line-height: 1.6;
         }
         
-        .lang-list {
-            color: #5a6c7d;
+        /* Modern Tags for Skills/Languages */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .tag {
+            background: #f0e6d2;
+            color: #8b6914;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            font-weight: 500;
         }
         
         footer {
@@ -120,6 +193,10 @@
             header {
                 flex-direction: column;
                 text-align: center;
+            }
+            
+            .card-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -139,112 +216,122 @@
 
     <section>
         <h2>About</h2>
-        <p>I'm a graduate student at the University of Trieste completing my Master's in Data Science, with a background in cognitive psychology and psycholinguistics. Currently writing my thesis on NLP-based analysis of psychological discourse. </p>
-        <p>Language fascinates me, and I always wonder if we (so called) humans can ever manage to fully fathom (or model) the linguistic structures in our brains or the cognitive processes that lie behind it (it is fascinating already that we are using language to do that). In the meantime I am trying to study the methods and the theory whether in computational linguistics, psycholinguistics, mere semantics/logic, or philosophy of language, in an attempt to have better tools for such a mission, naturally, I am curious about LLMs and their interpretability (XAI), especially regarding what they can -and cannot- reveal about how we think. I'm particularly interested in FAIR AI, the representation of low-resource languages, and the methodological insights we can gain from studying these systems' limitations and capabilities. In my free time I enjoy reading novels and rock climbing.</p>
+        <p>I'm a graduate student at the University of Trieste completing my Master's in Data Science, with a background in cognitive psychology and psycholinguistics. Currently writing my thesis on NLP-based analysis of psychological discourse with graduation due in March 2026 </p>
+        <p>Language fascinates me, and I always wonder if we (so called humans) can ever manage to fully fathom (or model) the linguistic structures in our brains or the cognitive processes that lie behind it (it is fascinating already that we are using language to do that). In the meantime I am trying to study the methods and the theory whether in computational linguistics, psycholinguistics, mere semantics/logic, or philosophy of language, in an attempt to have better tools for such a mission, naturally, I am curious about LLMs and their interpretability (XAI), especially regarding what they can—and cannot—reveal about how we think. I'm particularly interested in fair AI, the representation of low-resource languages, and the methodological insights we can gain from studying these systems' limitations and capabilities. In my free time I enjoy reading novels and rock climbing.</p>
     </section>
 
     <section>
         <h2>What am I doing now? </h2>
-        <p><strong>Writing my thesis (due in March 2026):</strong> Computational analysis of recovery narratives from psychological interviews using R and corpus linguistics methods (supervised by prof. M.Trevisani and A.Tuzzi)</p>
-        <p><strong>Freelance work (part-time):</strong> Preparing material and datasets for an Arabic learning application - creating CEFR-based curricula in TOML format with structured milestone progressions plus tutoring students for the filter semester in Italy</p>
+        <p><strong>Thesis (due March):</strong> Computational analysis of recovery narratives from psychological interviews using R and corpus linguistics methods (supervised by prof. M.Trevisani and A.Tuzzi).</p>
+        <p><strong>Freelance work (part-time):</strong> Preparing datasets for an Arabic learning application - creating CEFR-based curricula in TOML format with structured milestone progressions plus tutoring students for the TOLC exam in Italy.</p>
         <p><strong>Applying for a PhD :)</strong> </p>
     </section>
 
     <section>
         <h2>Some related projects I have worked on </h2>
         
-        <div class="project">
-            <h3>Text Recognition with Braille (Braille OCR) </h3>
-            <p><strong>Evoseed & Regina Margherita Library (2024)</strong> - Statistical analysis and fine-tuning of an OCR model for Braille character recognition, later deployed in the library</p>
-        </div>
-        
-        <div class="project">
-            <h3>Multi-Modal Customer Service AI</h3>
-            <p><strong>Evoseed (2025)</strong> - Developed comprehensive NLP pipelines and RAG systems for intelligent customer service automation</p>
-        </div>
-        
-        <div class="project">
-            <h3>Propaganda Detection in Tenglish</h3>
-            <p><strong>NLP Course (2025)</strong> - Built machine learning model for detecting propaganda in Telugu-English code-mixed text using PyTorch and HuggingFace transformers</p>
-        </div>
-        
-        <div class="project">
-            <h3>A Neural Entrainment EEG Paradigm for Hierarchical Linguistic Structures</h3>
-            <p><strong>Bachelor's Thesis (2022)</strong> - Research on neural processing of linguistic hierarchies using EEG, supervised by Prof. Francesco Vespignani at University of Padova</p>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-title">Text Recognition with Braille (Braille OCR)</div>
+                <div class="card-meta">Evoseed & Regina Margherita Library, 2024</div>
+                <div class="card-desc">Statistical analysis and fine-tuning of an OCR model for Braille character recognition, later deployed in the library.</div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">Multi-Modal Customer Service AI</div>
+                <div class="card-meta">Evoseed, 2025</div>
+                <div class="card-desc">Developed comprehensive NLP pipelines and RAG systems for intelligent customer service automation.</div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">Propaganda Detection in Tenglish</div>
+                <div class="card-meta">NLP Course, 2025</div>
+                <div class="card-desc">Built machine learning model for detecting propaganda in Telugu-English code-mixed text using PyTorch and HuggingFace transformers.</div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">A Neural Entrainment EEG Paradigm for Hierarchical Linguistic Structures</div>
+                <div class="card-meta">Bachelor's Thesis, 2022</div>
+                <div class="card-desc">Research on neural processing of linguistic hierarchies using EEG, supervised by Prof. Francesco Vespignani at University of Padova.</div>
+            </div>
         </div>
     </section>
 
     <section>
-        <h2>Summer Schools & Other Programs</h2>
+        <h2>Work Experience</h2>
         
-        <div class="program">
-            <h3>Eastern Generative Grammar (EGG) Summer School</h3>
-            <p><strong>Brașov, Romania (July 2024)</strong> - Intensive two-week program in theoretical linguistics with focus on formal semantics and generative grammar</p>
+        <div class="timeline-item">
+            <div class="timeline-title">Data Analyst at Evoseed, Trieste</div>
+            <div class="timeline-meta">June 2024 - June 2025</div>
+            <div class="timeline-desc">Developed NLP solutions, RAG systems, and automation models for customer service applications.</div>
         </div>
         
-        <div class="program">
-            <h3>Erasmus Study Mobility</h3>
-            <p><strong>Universidad Autónoma de Madrid (February-June 2024)</strong> - 5-month exchange program focusing on mathematics and advanced statistics</p>
+        <div class="timeline-item">
+            <div class="timeline-title">Research Assistant at University of Padova</div>
+            <div class="timeline-meta">May 2021 - September 2022</div>
+            <div class="timeline-desc">Contributed to neuropsychology of language research projects.</div>
         </div>
         
-        <div class="program">
-            <h3>Amnesty International Volunteer</h3>
-            <p><strong>Lampedusa, Italy (August 2024)</strong> - Volunteer work focused on integration and migration issues</p>
+        <div class="timeline-item">
+            <div class="timeline-title">Linguistic Mediator at Orizzonti, Padova</div>
+            <div class="timeline-meta">2021-2022</div>
+            <div class="timeline-desc">Provided translation and cultural mediation services.</div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-title">Private Tutor</div>
+            <div class="timeline-meta">2017-present</div>
+            <div class="timeline-desc">Teaching mathematics, physics, and Arabic to students at various levels.</div>
         </div>
     </section>
 
     <section>
         <h2>Education</h2>
         
-        <div class="education-item">
-            <h3>Master of Data Science and Applications</h3>
-            <p>University of Trieste, 2022-2025. Current average: 28/30</p>
+        <div class="timeline-item">
+            <div class="timeline-title">Master of Data Science and Applications</div>
+            <div class="timeline-meta">University of Trieste, 2022-2025. Current average: 28/30</div>
         </div>
         
-        <div class="education-item">
-            <h3>Bachelor of Psychology and Cognitive Science</h3>
-            <p>University of Padova, 2019-2022. Grade: 105/110</p>
+        <div class="timeline-item">
+            <div class="timeline-title">Bachelor of Psychology and Cognitive Science</div>
+            <div class="timeline-meta">University of Padova, 2019-2022. Grade: 105/110</div>
         </div>
 
-        <div class="education-item">
-            <h3>Diploma in Physics and Philosophy, Amirim honors program</h3>
-            <p>The Hebrew University of Jerusalem, 2017-2018. Grade: 86/100</p>
+        <div class="timeline-item">
+            <div class="timeline-title">Diploma in Physics and Philosophy, Amirim honors program</div>
+            <div class="timeline-meta">The Hebrew University of Jerusalem, 2017-2018. Grade: 86/100</div>
         </div>
     </section>
-
-    <section>
-    <h2>Work Experience</h2>
-    
-    <div class="work-item">
-        <h3>Data Analyst at Evoseed, Trieste</h3>
-        <p>June 2024 - June 2025. Developed NLP solutions, RAG systems, and automation models</p>
-    </div>
-    
-    <div class="work-item">
-        <h3>Research Assistant at University of Padova</h3>
-        <p>May 2021 - September 2022. Research in Neuropsychology of language and co-organization of weekly discussions with Colab group</p>
-    </div>
-    
-    <div class="work-item">
-        <h3>Linguistic Mediator at Orizzonti, Padova</h3>
-        <p>2021-2022. Translation and cultural mediation</p>
-    </div>
-    
-    <div class="work-item">
-        <h3>Private Tutor</h3>
-        <p>2017-present. Teaching mathematics, physics, and Arabic as L2 </p>
-    </div>
-    </section>
-    
 
     <section>
         <h2>Languages</h2>
-        <p class="lang-list">Arabic (Native), Italian (Fluent), English (Fluent), Hebrew (Fluent), Spanish (Intermediate)</p>
+        <div class="tag-container">
+            <span class="tag">Arabic (Native)</span>
+            <span class="tag">Italian (Fluent)</span>
+            <span class="tag">English (Fluent)</span>
+            <span class="tag">Hebrew (Fluent)</span>
+            <span class="tag">Spanish (Intermediate)</span>
+        </div>
     </section>
 
     <section>
         <h2>Skills</h2>
-        <p>Python (Pandas, NumPy, scikit-learn, TensorFlow), R, SQL, NLP, RAG Systems, Statistical Analysis, Power BI, Applied Linguistics, Psycholinguistics</p>
+        <div class="tag-container">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">R</span>
+            <span class="tag">SQL</span>
+            <span class="tag">NLP</span>
+            <span class="tag">RAG Systems</span>
+            <span class="tag">Statistical Analysis</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Applied Linguistics</span>
+            <span class="tag">Psycholinguistics</span>
+        </div>
     </section>
 
     <footer>
